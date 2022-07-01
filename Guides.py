@@ -135,3 +135,19 @@ while True:
         print('found it')
     else:
         print('couldnt find)
+
+#Set pyautogui failsafe on so you can end code by going to the corner of your display
+pyautogui.FAILSAFE = True
+
+#Another way to use keyboard strokes, but this gives more control:
+pyautogui.keyDown('f'))
+pyautogui.keyUp('f')
+
+#How to put adjustable variables into a function that you defined:
+def Hold_Key(key, seconds=1.00): #The purple text is the automatic time set, so if nothing is written in, it will fall back on this.
+    pyautogui.keyDown(key)
+    time.sleep(seconds)
+    pyautogui.keyUp(key)
+
+#How to use the above:
+holdKey('s', 6.00)
